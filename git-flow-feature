@@ -484,7 +484,7 @@ avoid_accidental_cross_branch_action() {
 
 cmd_pull() {
 	#DEFINE_string prefix false 'alternative remote feature branch name prefix' p
-	DEFINE_boolean rebase false "pull with rebase" r
+	DEFINE_boolean rebase true "pull with rebase" r
 	parse_remote_name "$@"
 
 	if [ -z "$REMOTE" ]; then
