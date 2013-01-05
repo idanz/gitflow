@@ -393,6 +393,7 @@ cmd_publish() {
 	# configure remote tracking
 	git_do config "branch.$BRANCH.remote" "$ORIGIN"
 	git_do config "branch.$BRANCH.merge" "refs/heads/$BRANCH"
+	git_do config "branch.$BRANCH.rebase" true
 	git_do checkout "$BRANCH"
 
 	echo
